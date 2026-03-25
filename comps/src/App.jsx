@@ -1,46 +1,27 @@
-import Button from './Button';
+import Button from './components/Button';
 import { GoBell, GoBook, GoClock, GoDatabase, GoFileMedia  } from "react-icons/go";
-
+import Accordion from './components/Accordion';
 
 function App() {
-  const handleClick = () => {
-    console.log("CLICK");
-  };
+  const items = [
+    {
+      id: 'oi13oih',
+      label: "Can I use React on Project?",
+      content: "You can use any language.You can use any language.You can use any language.You can use any language.You can use any language."
+    },
+    {
+      id:'srg09arg',
+      label: "Can I use Javascript on Project?",
+      content: "You can use any language.You can use any language.You can use any language.You can use any language.You can use any language."
+    },
+    {
+      id:'lkj36lkj', 
+      label: "Can I use CSS on Project?",
+      content: "You can use any language.You can use any language.You can use any language.You can use any language.You can use any language."
+    }
+  ];
 
-  return (
-    <div> 
-      <div>
-        <Button success  rounded outline className="mb-5" onClick={handleClick}>
-          <GoBell />
-          Click me!!
-        </Button>
-      </div>
-      <div>
-        <Button danger outline>
-          <GoBook />
-          Buy Now!
-        </Button>
-      </div>
-      <div>
-        <Button warning>
-          <GoClock  />
-          See Deal!
-          </Button>
-      </div>
-      <div>
-        <Button secondary outline>
-          <GoDatabase />
-          Hide Ads!
-        </Button>
-      </div>
-      <div>
-        <Button primary rounded>
-          <GoFileMedia  />
-          Something!
-        </Button>
-      </div>
-    </div>
-  );
+  return <Accordion items={items}/>;
 }
 
 export default App;
